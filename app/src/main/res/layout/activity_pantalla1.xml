@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white"
+    tools:context=".Pantalla1">
+
+
+    <ImageButton
+        android:id="@+id/btnPerfil"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_profile"
+        android:scaleType="centerCrop"
+        android:contentDescription="Ir al perfil"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp" />
+
+
+    <!-- Botón cerrar sesión -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCerrarSesion"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:backgroundTint="@color/black"
+        app:cornerRadius="24dp"
+        app:icon="@drawable/ic_logout"
+        app:iconTint="@color/white"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        android:contentDescription="Cerrar sesión"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp" />
+
+
+
+    <!-- Título Bienvenido -->
+    <TextView
+        android:id="@+id/tvBienvenido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¡Bienvenido!"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/btnCerrarSesion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <!-- Card Agendar horas - ocupa la mitad superior -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardAgendar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="8dp"
+        app:strokeWidth="1dp"
+        app:layout_constraintTop_toBottomOf="@id/tvBienvenido"
+        app:layout_constraintBottom_toTopOf="@id/cardLocales"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginHorizontal="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="24dp">
+
+            <ImageView
+                android:id="@+id/iconCalendar"
+                android:layout_width="150dp"
+                android:layout_height="120dp"
+                android:contentDescription="Ícono calendario"
+                android:src="@drawable/ic_calendar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/tvTituloAgendar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Agendar horas"
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.256"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iconCalendar"
+                app:layout_constraintVertical_bias="0.555" />
+
+            <TextView
+                android:id="@+id/tvSubtituloAgendar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Programar citas"
+                android:textColor="#777777"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvTituloAgendar"
+                app:layout_constraintTop_toBottomOf="@id/tvTituloAgendar"
+                app:layout_constraintVertical_bias="0.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <!-- Card Locales cercanos - ocupa la mitad inferior -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardLocales"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="8dp"
+        app:strokeWidth="1dp"
+        app:layout_constraintTop_toBottomOf="@id/cardAgendar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginHorizontal="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="24dp">
+
+            <ImageView
+                android:id="@+id/iconLocation"
+                android:layout_width="150dp"
+                android:layout_height="120dp"
+                android:contentDescription="Ícono ubicación"
+                android:src="@drawable/ic_location"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/tvTituloLocales"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Locales cercanos"
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.269"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iconLocation"
+                app:layout_constraintVertical_bias="0.559" />
+
+            <TextView
+                android:id="@+id/tvSubtituloLocales"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buscar ubicaciones"
+                android:textColor="#777777"
+                android:textSize="20dp"
+                app:layout_constraintTop_toBottomOf="@id/tvTituloLocales"
+                app:layout_constraintStart_toStartOf="@id/tvTituloLocales" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

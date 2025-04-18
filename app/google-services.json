@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "689991541931",
+    "project_id": "logiiin-12779",
+    "storage_bucket": "logiiin-12779.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:689991541931:android:7581591a65501c652e83ee",
+        "android_client_info": {
+          "package_name": "com.example.ejemplo_login"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJyzLQIfow65mrHLKsPn0zztIlfSW8qC8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

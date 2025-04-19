@@ -12,7 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ejemplo_login"
         tools:targetApi="31">
-
+        <activity
+            android:name=".LocalesCercanosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SeleccionarHoraActivity"
+            android:exported="false" />
         <activity
             android:name=".AgendarHorasActivity"
             android:exported="false" />

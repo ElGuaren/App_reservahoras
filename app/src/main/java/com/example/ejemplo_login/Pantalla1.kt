@@ -31,6 +31,12 @@ class Pantalla1 : AppCompatActivity() {
             startActivity(Intent(this, AgendarHorasActivity::class.java))
         }
 
+        // Ir a LocalesCercanosActivity al presionar la card de Locales Cercanos
+        val cardLocalesCercanos = findViewById<MaterialCardView>(R.id.cardLocales)
+        cardLocalesCercanos.setOnClickListener {
+            startActivity(Intent(this, LocalesCercanosActivity::class.java))
+        }
+
         // Cerrar sesión
         val btnCerrarSesion = findViewById<MaterialButton>(R.id.btnCerrarSesion)
         btnCerrarSesion.setOnClickListener {
